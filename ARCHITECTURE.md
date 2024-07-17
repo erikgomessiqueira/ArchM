@@ -18,9 +18,6 @@ O nomes do arquivos devem possuir o sufixo de sua camada.
 ## Core
 Deve conter informações globais e reutilizáveis ​​para todas as camadas da aplicação.
 
-## Module
-Contém todas as informações de uma determinada funcionalidade.
-
 ## Interator 
 Esta camada deve lidar com a gerência de estados, a representação de regras de negócios, abstrações para comunicação com outras camadas e as interações na interface do usuário.
 
@@ -43,10 +40,10 @@ Esta camada deve lidar com a gerência de estados, a representação de regras d
         Deve conter o estados realacioandos a interação com as telas da aplicação.
     
     - #### Widget: 
-        Deve conter os componentes que compõe a tela.
+        Deve conter os componentes que compõe as telas.
 
     - #### View: 
-        Deve conter a tela relacionada a aplicação.
+        Deve conter as telas relacionada a aplicação.
 
 <br>
 
@@ -71,21 +68,18 @@ De acordo com o a proposta de arquitetura, a estuturação de pastas foi definid
 └── lib/
     ├── core/
     │   └── ...
-    └── modules/
-        └── login/
-            ├── interactor/
-            │   ├── models
-            │   ├── repositories
-            │   ├── dto
-            │   ├── helpers
-            │   └── presenter/
-            │       ├── states
-            │       ├── widget
-            │       └── view
-            ├── infra/
-            │   ├── repositories
-            │   ├── services
-            │   └── adapters
-            └── login_module.dart
+    ├── interactors/
+    │   ├── models
+    │   ├── repositories
+    │   ├── dto
+    │   ├── helpers
+    │   └── presenters/
+    │       ├── states
+    │       ├── widgets
+    │       └── views
+    └── infra/
+        ├── repositories
+        ├── services
+        └── adapters
 ```
 
